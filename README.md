@@ -2,6 +2,9 @@
 
 End-to-End Machine Learning Web Application
 
+## Live Demo 
+https://fire-weather-index-prediction-7stl.onrender.com
+
 📌 Overview
 
 An end-to-end Machine Learning project that predicts the Fire Weather Index (FWI)
@@ -45,6 +48,8 @@ Web Framework: Flask
 Frontend: HTML, CSS
 
 Tools: VS Code, Jupyter Notebook
+
+Deployment: Render
 
 📊 Input Features
 
