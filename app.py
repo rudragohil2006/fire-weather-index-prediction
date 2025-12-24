@@ -36,11 +36,11 @@ def predict_datapoint():
             # Transform using the DataFrame
             new_data_scaled = standard_scaler.transform(df)
             result = ridge_model.predict(new_data_scaled)
-            return render_template('home.html', results=result[0])
+            return render_template('index.html', results=result[0])
         except Exception as e:
             return f"Backend Error: {str(e)}"
     else:
-        return render_template('home.html')
+        return render_template('index.html')
 
 if __name__=="__main__":
     port = int(os.environ.get("PORT", 5000))
