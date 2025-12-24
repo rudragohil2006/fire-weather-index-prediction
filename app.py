@@ -1,12 +1,11 @@
 import pickle
-from flask import Flask,request,jsonify,render_template
-import numpy as np
+from flask import Flask,request,render_template
 import pandas as pd
-from sklearn.preprocessing import StandardScaler
+import os
 
 
-application = Flask(__name__)
-app=application
+app = Flask(__name__)
+
 
 ##import ridge regressor and standard scaler picke
 ridge_model=pickle.load(open('Models/ridge.pkl', 'rb'))
@@ -44,4 +43,5 @@ def predict_datapoint():
         return render_template('home.html')
 
 if __name__=="__main__":
-    app.run(host="0.0.0.0")
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
